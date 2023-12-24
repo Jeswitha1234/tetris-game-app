@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: jeswithatetrisgameapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jeswithatetrisgameapp
+  template:
+    metadata:
+      labels:
+        app: jeswithatetrisgameapp 
+    spec:
+      containers:
+        - name: jeswithatetrisgameapp 
+          image: gabtesting.azurecr.io/jeswithatetrisgameapp
+          ports:
+          - containerPort: 80
